@@ -6,7 +6,8 @@
 > Search Bar personalizado
 > OU
 > Configuração do AppServiceProvider 
-> Registrar a macro personalizada para o Query Builder
+Registrar a macro personalizada para o Query Builder
+
         Builder::macro('search', function ($string) {
             return $string ? $this->where(function ($query) use ($string) {
                 $columns = Schema::getColumnListing($this->from);
